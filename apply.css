@@ -1,0 +1,625 @@
+:root{
+  --color-1: #0f1016;
+  --text-color: #f0f0f0;
+  --accent-color: #006aff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+  background-color: white;
+
+
+}
+/* COdes For Navigation Bar Starts there  :) */
+
+
+.theboxfortheheadingbox{
+  margin-top: 30px  ;
+  width: 100%;
+  height: 100px;
+  background-image: url(img/coursepage01.png);
+  backdrop-filter: blur(10px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+.theheadingforbox{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav{
+  height: 60px;
+  color: black;
+  backgr ound-color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.links-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: black;
+}
+nav a{
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+nav a:hover{
+  background-color: var(--a ccent-color);
+}
+nav .home-link{
+  margin-right: auto;
+}
+nav svg{
+  fill: var(--text-color);
+}
+#sidebar-active{
+  display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+  display: none;
+}
+
+
+.links-container.links-container::after { 
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: rgb(0, 183, 255);
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  opacity: 0;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+
+.links-1:hover::after,
+.links-1:focus::after{
+  opacity: 1;
+}
+
+
+@media(max-width: 500px){
+  .logoimg{
+    width: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1090px){
+  .links-container{
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+
+    background-color: var(--color-1);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+  }
+  nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+  .open-sidebar-button, .close-sidebar-button{
+    padding: 20px;
+    display: block;
+  }
+  #sidebar-active:checked ~ .links-container{
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+}
+
+
+.btn-1{
+  margin: 30px;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid black;
+  border-radius: 50px;
+  cursor: pointer;
+  background: none;
+
+}
+
+.btn-1:hover{
+  letter-spacing: 0.2em;
+  box-shadow: 0 0 35px var(--clr);
+}
+
+.btn-1, a{
+  font-size: 15px;
+  color: black;
+}
+
+
+.links-1{
+  color: black;
+}
+
+
+.btn_1_1{
+  color: black;
+}
+
+
+.links-1{
+  position: relative;
+}
+.links-1.links-1::after { 
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: rgb(0, 183, 255);
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  opacity: 0;
+  transition: all 0.2s;
+  pointer-events: none;
+}
+
+.links-1:hover::after,
+.links-1:focus::after{
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+.navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: none;
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(6px);
+}
+.navbar, ul, li, a{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.logoimg{
+  width: 70%;
+}
+
+
+.logo{
+    padding-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+.navbar, .logo, a{
+    font-size: large;
+}
+.links-1{
+    position: relative;
+}
+.links-1.links-1::after { 
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: rgb(0, 183, 255);
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.links-1:hover::after,
+.links-1:focus::after{
+    opacity: 1;
+}
+.btn-1{
+    margin: 30px;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    background: none;
+
+}
+
+.btn-1:hover{
+    letter-spacing: 0.2em;
+    box-shadow: 0 0 35px var(--clr);
+}
+
+.btn-1, a{
+    font-size: 15px;
+}
+
+.links, li{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+.links, li, a{
+    text-decoration: none;
+} */
+
+
+/* Code for the Navigation Bar ends here :) */
+
+
+ 
+
+/* ----------------------------------------------------------Code for the Main page starts here :) -------------------------------------------------------------- */
+
+.mainhell{
+    display: flex;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+
+
+.applyheading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.applybox{
+    background-color: rgba(224, 222, 222, 0.158);
+    backdrop-filter: blur(6px);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.thecontentofhell{
+    width: 50%;
+    }
+
+.themohtajhell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .thehellpanal{
+    width: 500px;
+    height: 500px;
+    background-color: none;
+    margin-top: 150px;
+  }
+  .thehelltitle{
+    text-align: center;
+  }
+
+
+
+
+.firstname,
+.surname,
+.contactform,
+.dob,
+.coursedorpdown
+{
+    margin-bottom: 20px;
+}
+.firstname, input{
+    padding: 10px 10px 10px 10px;
+
+}
+.surname, input{
+    padding: 10px 10px 10px 10px;
+
+}
+.contactform, input{
+    padding: 10px 10px 10px 10px;
+
+}
+.dob, input{
+    padding: 10px 10px 10px 10px;
+
+}
+.coursedorpdown, select{
+    padding: 10px 10px 10px 10px;
+
+}
+
+
+
+
+
+
+
+
+
+.firstname-1{
+    margin-right: 50px;
+
+}
+
+.surname-1{
+    margin-right: 26px;
+}
+.contactform-1{
+    margin-right: 38px;
+}
+.emailpadding{
+    margin-right: 20px;
+    padding: 10px 10px 10px 10px;
+}
+.dob-1{
+    margin-right: 8px;
+}
+.coursedorpdown-1{
+    margin-right: 76px;
+}
+
+
+
+.thesubmitbutton{
+  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px;
+    border: 1px solid black;
+    background: none;
+    cursor: pointer;
+}
+.thesubmitbutton :hover{
+  color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  .footer {
+    margin-top: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: #2f2f2f;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .footer > * {
+    flex:  1 100%;
+  }
+  
+  .footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .footer__logo {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+  }
+  
+  .footer__addr h2 {
+    margin-top: 1.3em;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .nav__title {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
+  .footer address {
+    font-style: normal;
+    color: #999;
+  }
+  
+  .footer__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #2f2f2f;
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: 1rem;
+    padding: 0 1.3em;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .footer li {
+    line-height: 2em;
+  }
+  
+  .footer a {
+    text-decoration: none;
+  }
+  
+  .footer__nav {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  .footer__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+  }
+  
+  .nav__ul a {
+    color: #999;
+  }
+  
+  .nav__ul--extra {
+    column-count: 2;
+    column-gap: 1.25em;
+  }
+  
+  .legal {
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+  }
+    
+  .legal__links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .heart {
+    color: #2f2f2f;
+  }
+  
+  @media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+      margin-left: auto;
+    }
+  }
+  
+  @media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+      flex: 1;
+    }
+    
+    .nav__item--extra {
+      flex-grow: 2;
+    }
+    
+    .footer__addr {
+      flex: 1 0px;
+    }
+    
+    .footer__nav {
+      flex: 2 0px;
+    }
+  }
